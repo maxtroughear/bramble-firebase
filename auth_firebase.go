@@ -16,14 +16,13 @@ import (
 )
 
 func init() {
-	bramble.RegisterPlugin(NewFirebasePlugin("", nil))
+	bramble.RegisterPlugin(NewFirebasePlugin(nil))
 }
 
-func NewFirebasePlugin(credentialsFilePath string, roles map[string]bramble.OperationPermissions) *FirebasePlugin {
+func NewFirebasePlugin(roles map[string]bramble.OperationPermissions) *FirebasePlugin {
 	return &FirebasePlugin{
 		config: FirebasePluginConfig{
-			ServiceAccountFilePath: credentialsFilePath,
-			Roles:                  roles,
+			Roles: roles,
 		},
 		jwtExtractorr: request.MultiExtractor{
 			request.AuthorizationHeaderExtractor,
