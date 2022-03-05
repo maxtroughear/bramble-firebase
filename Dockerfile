@@ -7,7 +7,7 @@ RUN go mod download
 
 COPY . .
 
-RUN GCO_ENABLED=0 -o /go/bin/app
+RUN GCO_ENABLED=0 go build -o /go/bin/app
 
 FROM gcr.io/distroless/static
 
