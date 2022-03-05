@@ -16,7 +16,7 @@ jobs:
       packages: write
     steps:
       - name: Checkout
-        uses: actions/checkout@2
+        uses: actions/checkout@v2
 
       - name: Expose Github Runtime
         uses: crazy-max/ghaction-github-runtime@v1
