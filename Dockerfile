@@ -13,4 +13,4 @@ FROM gcr.io/distroless/static
 
 COPY --from=builder /go/bin/app /
 
-CMD ["/app"]
+CMD ["/app", "-conf", "/config.json"]
