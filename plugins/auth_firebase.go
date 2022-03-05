@@ -1,4 +1,4 @@
-package bramblefirebase
+package plugins
 
 import (
 	"context"
